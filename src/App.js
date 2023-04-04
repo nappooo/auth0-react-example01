@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import AuthenticationButton from './components/signup-in-out/authentication-button';
+import ProtectedApiCallButton from './components/api-call/protected-api-call-button';
+import { Stack } from '@mui/system';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Stack 
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        spacing={2}
+        sx={{
+          backgroundColor:'#e3e3e3'
+        }}
+      >
+        <AuthenticationButton/>
+        <ProtectedApiCallButton/>
+      </Stack> 
+    </>
   );
 }
 
